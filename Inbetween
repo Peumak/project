@@ -1,0 +1,41 @@
+// This is my code that I would like to run in jenkins for my project
+package Loops;
+import java.util.*;
+public class Inbetween {
+	
+	public static void main(String[] args)
+	{
+		int firstInteger =0;
+		int secondInteger =0;
+		int difference = 0;
+		int temp = 0;
+		int forloopvariable =0;
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Please enter first integer: ");
+		firstInteger = input.nextInt();
+				
+		System.out.println("Please enter second integer: ");
+		secondInteger = input.nextInt();
+		
+		System.out.println("Intergers between entered integers are: ");
+		
+		difference = secondInteger - firstInteger;
+		if(difference<0) //swap values if the difference is negative
+		{
+			temp=firstInteger;
+			firstInteger = secondInteger;
+			secondInteger = temp;
+			
+			for(forloopvariable = firstInteger +1 ; forloopvariable<secondInteger;forloopvariable++)
+				System.out.print(forloopvariable+ " ");
+					
+		}
+		else
+			for(forloopvariable = firstInteger +1 ; forloopvariable<secondInteger;forloopvariable++)
+				System.out.print(forloopvariable+ " ");
+		
+	}
+
+}
